@@ -40,4 +40,13 @@ export default function App() {
     { id: '5', texto: 'Enviar reporte semanal por correo' },
   ]);
  
- 
+ const agregarTarea = () => {
+    const limpio = texto.trim();
+    if (limpio === '') return; // no agrega vacías ni solo espacios
+    setTareas((prev) => [...prev, { id: Date.now().toString(), texto: limpio }]);
+    setTexto('');
+  };
+  
+  const eliminarTarea = (id) => {
+    setTareas((prev) => prev.filter((t) => t.id !== id));
+  };
