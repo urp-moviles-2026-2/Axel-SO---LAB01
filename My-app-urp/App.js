@@ -103,3 +103,18 @@ export default function App() {
     </GestureHandlerRootView>
   );
 }
+
+const MORADO = '#4f46e5';
+ 
+const styles = StyleSheet.create({
+  pantalla: {
+    flex: 1,
+    backgroundColor: '#f4f5fb',
+    paddingTop: Platform.OS === 'android' ? RNStatusBar.currentHeight : 0,
+  },
+  encabezado: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 20,
+    paddingVertical: 14,
+  }
