@@ -160,3 +160,28 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   textoAnadir: { color: '#fff', fontSize: 16, fontWeight: '600', marginLeft: 6 },
+  lista: { paddingHorizontal: 16, paddingBottom: 24 },
+  swipeContenedor: { marginBottom: 12 },
+  tarjeta: {
+    backgroundColor: '#fff',
+    borderRadius: 16,
+    paddingHorizontal: 22,
+    paddingVertical: 20,
+  },
+  textoTarea: { fontSize: 16, color: '#1f2240' },
+ 
+  accionContenedor: {
+    width: 100,
+    justifyContent: 'center',
+    alignItems: 'flex-end',
+  },
+  botonEliminar: {
+    width: 84,
+    height: '100%',
+    backgroundColor: '#b91c1c',
+    borderRadius: 16,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  textoEliminar: { color: '#fff', fontSize: 12, fontWeight: '600', marginTop: 2 },
+});
