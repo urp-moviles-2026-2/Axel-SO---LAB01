@@ -117,4 +117,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingHorizontal: 20,
     paddingVertical: 14,
-  }
+  },
+  logo: {
+    width: 40,
+    height: 40,
+    borderRadius: 12,
+    backgroundColor: MORADO,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 12,
+  },
