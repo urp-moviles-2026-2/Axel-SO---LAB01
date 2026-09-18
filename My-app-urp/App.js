@@ -127,3 +127,20 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     marginRight: 12,
   },
+  titulo: { fontSize: 22, fontWeight: '700', color: '#1f2240' },
+ 
+  formulario: {
+    backgroundColor: '#fff',
+    marginHorizontal: 16,
+    padding: 16,
+    borderRadius: 20,
+    marginBottom: 16,
+  },
+  inputContenedor: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#eef0fb',
+    borderRadius: 12,
+    paddingHorizontal: 16,
+    marginBottom: 12,
+  },
