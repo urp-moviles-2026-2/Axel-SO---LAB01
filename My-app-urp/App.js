@@ -46,7 +46,60 @@ export default function App() {
     setTareas((prev) => [...prev, { id: Date.now().toString(), texto: limpio }]);
     setTexto('');
   };
-  
+
   const eliminarTarea = (id) => {
     setTareas((prev) => prev.filter((t) => t.id !== id));
   };
+
+  return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <SafeAreaView style={styles.pantalla}>
+        <StatusBar style="dark" />
+ 
+        {/* Encabezado */}
+        <View style={styles.encabezado}>
+          <View style={styles.logo}>
+            <Ionicons name="checkmark" size={22} color="#fff" />
+          </View>
+          <Text style={styles.titulo}>Tareas</Text>
+        </View>
+ 
+        {/* Formulario */}
+        <View style={styles.formulario}>
+          <View style={styles.inputContenedor}>
+            <Ionicons name="create-outline" size={20} color={MORADO} />
+            <TextInput
+              style={styles.input}
+              placeholder="Escribe una nueva tarea..."
+              placeholderTextColor="#8a8fa8"
+              value={texto}
+              onChangeText={setTexto}
+              onSubmitEditing={agregarTarea}
+              returnKeyType="done"
+            />
+          </View>
+          <TouchableOpacity
+            style={styles.botonAnadir}
+            onPress={agregarTarea}
+            activeOpacity={0.85}
+          >
+            <Ionicons name="add" size={20} color="#fff" />
+            <Text style={styles.textoAnadir}>Añadir tarea</Text>
+          </TouchableOpacity>
+        </View>
+ 
+        {/* Lista con scroll */}
+        <FlatList
+          data={tareas}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => (
+            <TareaItem tarea={item} onEliminar={eliminarTarea} />
+          )}
+          contentContainerStyle={styles.lista}
+          showsVerticalScrollIndicator={false}
+          keyboardShouldPersistTaps="handled"
+        />
+      </SafeAreaView>
+    </GestureHandlerRootView>
+  );
+}
