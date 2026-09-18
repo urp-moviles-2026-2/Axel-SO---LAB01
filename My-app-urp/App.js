@@ -29,3 +29,15 @@ function TareaItem({ tarea, onEliminar }) {
     </ReanimatedSwipeable>
   );
 }
+
+export default function App() {
+  const [texto, setTexto] = useState('');
+  const [tareas, setTareas] = useState([
+    { id: '1', texto: 'Informe de métricas' },
+    { id: '2', texto: 'Comprar insumos para el taller' },
+    { id: '3', texto: 'Revisar pull request de pasarela' },
+    { id: '4', texto: 'Llamar al médico para cita anual' },
+    { id: '5', texto: 'Enviar reporte semanal por correo' },
+  ]);
+ 
+ 
